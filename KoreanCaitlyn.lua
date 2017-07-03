@@ -325,38 +325,6 @@ function KoreanCaitlyn:IsSnared(unit)
 end
 
 
-function KoreanCaitlyn:Draw()
-	local textPos = myHero.pos:To2D()
-	if self.Menu.Combo.HotKeyChanger2:Value() then
-			
-			Draw.Text("Q+E Disabled", textPos.x, textPos.y + 40)
-	end
-	if self.Menu.Combo.HotKeyChanger:Value() then
-		
-		Draw.Text("Auto Q On Cursor", textPos.x, textPos.y + 30)
-	end
-
-	if self.Menu.Combo.HotKeyChanger3:Value() then
-		Draw.Text("Auto Trap Enabled", textPos.x, textPos.y + 50)
-	end
-
-	if self.Menu.Draw.DrawTraps:Value() then
-		self:BlueTrapDraw()
-		self:RedTrapDraw()
-	end
-
-	if self.Menu.Draw.DrawQ:Value() then
-		Draw.Circle(myHero.pos, Q.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
-	if self.Menu.Draw.DrawW:Value() then
-		Draw.Circle(myHero.pos, W.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
-	if self.Menu.Draw.DrawE:Value() then
-		Draw.Circle(myHero.pos, E.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
-	if self.Menu.Draw.DrawR:Value() then
-		Draw.Circle(myHero.pos, R.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
 
 
 	local target = self:OrbTarget(1100)
